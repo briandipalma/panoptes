@@ -8,12 +8,13 @@
 	"globals": {
         "ct": false,
         "caplin": false,
-		"caplinx": false,
-		"TestCase": false,
-		"assertTrue": false,
-		"assertEquals": false,
-		"sinon": false,
-		"moment": false
+	"caplinx": false,
+	"TestCase": false,
+	"assertTrue": false,
+	"assertEquals": false,
+	"sinon": false,
+	"moment": false,
+        "caplinps": false
     },
 
     "rules": {
