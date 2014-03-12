@@ -1,6 +1,6 @@
 {
   "name": "panoptes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Watches over all the JS files with loving grace.",
   "main": "./lib/panoptes.js",
   "bin": "./bin/panoptes-cli.js",
