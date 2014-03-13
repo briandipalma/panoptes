@@ -6,15 +6,16 @@
     },
 
 	"globals": {
-        "ct": false,
-        "caplin": false,
-	"caplinx": false,
-	"TestCase": false,
-	"assertTrue": false,
-	"assertEquals": false,
-	"sinon": false,
-	"moment": false,
-        "caplinps": false
+		"ct": false,
+		"caplin": false,
+		"caplinx": false,
+		"TestCase": false,
+		"assertTrue": false,
+		"assertEquals": false,
+		"sinon": false,
+		"moment": false,
+		"caplinps": false,
+		"$": false
     },
 
     "rules": {
@@ -124,7 +125,7 @@
         "space-unary-word-ops": 0,
         "strict": 2,
         "use-isnan": 2,
-        "valid-jsdoc": 0,
+        "valid-jsdoc": 2,
         "wrap-iife": 0,
         "wrap-regex": 0
     }
