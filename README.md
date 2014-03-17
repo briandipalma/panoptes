@@ -3,7 +3,7 @@ To Use
 
 Install by running
 
-`npm i -g briandipalma/panoptes#1.0.0`
+`npm i -g briandipalma/panoptes#2.0.0`
 
 Then `cd` to the root of the JS code you wish to monitor.
 
