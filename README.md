@@ -1,7 +1,7 @@
 Use
 ---
 
-Panoptes monitors all changes to JS files and verifies that the changed JS file adheres to the [Caplin Style Guide](http://caplin.github.io/StyleGuide/) and passes a small battery of [ESLint] tests. It runs from the command line and provides output on every file change.
+Panoptes monitors all changes to JS files and verifies that the changed JS file adheres to the [Caplin Style Guide](http://caplin.github.io/StyleGuide/) and passes a small battery of [ESLint](http://eslint.org/) tests. It runs from the command line and provides output on every file change.
 
 To Use
 ------
