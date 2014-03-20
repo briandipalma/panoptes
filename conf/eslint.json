@@ -17,7 +17,9 @@
 		"caplinps": false,
 		"$": false,
 		"jQuery": false,
-		"Draggabilly": false
+		"Draggabilly": false,
+		"assertFalse": false,
+		"Emitter": false
     },
 
     "rules": {
@@ -128,7 +130,7 @@
         "strict": 2,
         "use-isnan": 2,
         "valid-jsdoc": [2, {"requireReturn": false}],
-        "wrap-iife": 2,
+        "wrap-iife": [2, "outside"],
         "wrap-regex": 0
     }
 }
