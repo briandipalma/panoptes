@@ -20,6 +20,8 @@
 		"Draggabilly": false,
 		"assertFalse": false,
 		"Emitter": false
+        "describe": false,
+        "it": false
     },
 
     "rules": {
