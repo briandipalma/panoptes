@@ -101,7 +101,7 @@
         "block-scoped-var": 0,
         "brace-style": [2, "1tbs"],
         "camelcase": 2,
-        "complexity": [2, 6],
+        "complexity": [1, 8],
         "consistent-return": 2,
         "consistent-this": [2, "self"],
         "curly": [2, "all"],
@@ -130,7 +130,7 @@
         "strict": 2,
         "use-isnan": 2,
         "valid-jsdoc": [2, {"requireReturn": false}],
-        "wrap-iife": [2, "outside"],
+        "wrap-iife": [2, "any"],
         "wrap-regex": 0
     }
 }
