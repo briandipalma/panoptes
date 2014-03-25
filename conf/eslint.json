@@ -19,7 +19,7 @@
 		"jQuery": false,
 		"Draggabilly": false,
 		"assertFalse": false,
-		"Emitter": false
+		"Emitter": false,
         "describe": false,
         "it": false
     },
