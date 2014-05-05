@@ -9,6 +9,28 @@ function launchPanoptes() {
   Promise.all(promises).then(startWatchingJSFiles).catch(launchingFailed);
 }
 ;
+function shouldDirectoryBeIgnored(directoryPath) {
+  return /.*node_modules$/.test(directoryPath) || /.*\.git$/.test(directoryPath) || /.*\.svn$/.test(directoryPath) || /.*bundles$/.test(directoryPath);
+}
+function ignoreAllFilesExceptJSFiles(path, stats) {
+  if (stats) {
+    if (stats.isFile() && /.*\.js$/.test(path) === false) {
+      return true;
+    } else if (stats.isDirectory() && shouldDirectoryBeIgnored(path)) {
+      return true;
+    }
+  }
+  return false;
+}
+function fileWatchingErrored(error) {
+  Log.error("Error while watching file.");
+  Log.error(error);
+}
+function watchedJSFileChanged(path) {
+  Log.info("{0} changed", path);
+  panoptesJSCSChecker.checkFileWithJSCS(path);
+  panoptesESLint(path);
+}
 function startWatchingJSFiles() {
   var watcher = chokidar.watch(".", {
     persistent: true,
