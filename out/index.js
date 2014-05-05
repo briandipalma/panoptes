@@ -3,7 +3,8 @@ var __moduleName = "./src/index";
 var $__0 = $traceurRuntime.assertObject(require("jscs-checker")),
     configureJSCS = $__0.configureJSCS,
     checkFileWithJSCS = $__0.checkFileWithJSCS;
-var chokidar = $traceurRuntime.assertObject(require("chokidar")).chokidar;
+var Log = $traceurRuntime.assertObject(require("fell")).Log;
+var chokidar = require("chokidar");
 function launchPanoptes() {
   var promises = [configureJSCS()];
   Promise.all(promises).then(startWatchingJSFiles).catch(launchingFailed);
@@ -28,8 +29,7 @@ function fileWatchingErrored(error) {
 }
 function watchedJSFileChanged(path) {
   Log.info("{0} changed", path);
-  panoptesJSCSChecker.checkFileWithJSCS(path);
-  panoptesESLint(path);
+  checkFileWithJSCS(path);
 }
 function startWatchingJSFiles() {
   var watcher = chokidar.watch(".", {

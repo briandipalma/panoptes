@@ -4,7 +4,8 @@ import {
 	configureJSCS,
 	checkFileWithJSCS
 } from "jscs-checker";
-import {chokidar} from "chokidar";
+import {Log} from "fell";
+module chokidar from "chokidar";
 
 /**
  * Starts up panoptes.
@@ -71,8 +72,7 @@ function fileWatchingErrored(error) {
 function watchedJSFileChanged(path) {
 	Log.info("{0} changed", path);
 
-	panoptesJSCSChecker.checkFileWithJSCS(path);
-	panoptesESLint(path);
+	checkFileWithJSCS(path);
 }
 
 /**
