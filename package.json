@@ -14,6 +14,7 @@
     "es6-module-loader": "0.5.4",
     "jscs-checker": "git://github.com/briandipalma/JSCS-checker",
     "chokidar": "^0.8.2",
-    "fell": "0.0.2"
+    "fell": "0.0.2",
+    "eslint-checker": "git://github.com/briandipalma/eslint-checker"
   }
 }
