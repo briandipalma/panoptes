@@ -1,9 +1,15 @@
 "use strict";
-var __moduleName = "./src/index";
+Object.defineProperties(exports, {
+  launchPanoptes: {get: function() {
+      return launchPanoptes;
+    }},
+  __esModule: {value: true}
+});
 var $__0 = $traceurRuntime.assertObject(require("jscs-checker")),
     configureJSCS = $__0.configureJSCS,
     checkFileWithJSCS = $__0.checkFileWithJSCS;
 var Log = $traceurRuntime.assertObject(require("fell")).Log;
+var checkFileWithESLint = $traceurRuntime.assertObject(require("eslint-checker")).checkFileWithESLint;
 var chokidar = require("chokidar");
 function launchPanoptes() {
   var promises = [configureJSCS()];
@@ -30,6 +36,7 @@ function fileWatchingErrored(error) {
 function watchedJSFileChanged(path) {
   Log.info("{0} changed", path);
   checkFileWithJSCS(path);
+  checkFileWithESLint(path);
 }
 function startWatchingJSFiles() {
   var watcher = chokidar.watch(".", {
@@ -43,9 +50,3 @@ function launchingFailed(error) {
   Log.error("Unable to launch.");
   Log.error(error);
 }
-module.exports = {
-  get launchPanoptes() {
-    return launchPanoptes;
-  },
-  __esModule: true
-};

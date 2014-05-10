@@ -5,6 +5,8 @@ import {
 	checkFileWithJSCS
 } from "jscs-checker";
 import {Log} from "fell";
+import {checkFileWithESLint} from "eslint-checker";
+
 module chokidar from "chokidar";
 
 /**
@@ -73,6 +75,7 @@ function watchedJSFileChanged(path) {
 	Log.info("{0} changed", path);
 
 	checkFileWithJSCS(path);
+	checkFileWithESLint(path);
 }
 
 /**
