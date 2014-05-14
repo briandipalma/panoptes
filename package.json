@@ -6,6 +6,7 @@
   "author": "Brian Di Palma",
   "license": "BSD-2-Clause",
   "scripts": {
+    "watch": "watchy -sw src -- npm run build",
     "start": "npm run build && node index.js",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
@@ -14,6 +15,7 @@
     "jscs-checker": "git://github.com/briandipalma/JSCS-checker",
     "chokidar": "^0.8.2",
     "fell": "0.0.2",
-    "eslint-checker": "git://github.com/briandipalma/eslint-checker"
+    "eslint-checker": "git://github.com/briandipalma/eslint-checker",
+    "watchy": "^0.4.4"
   }
 }
