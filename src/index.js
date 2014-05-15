@@ -1,21 +1,22 @@
-/** @module panoptes/lib/panoptes */
+/** @module panoptes/src/index */
 
-"use strict";
+import {
+	configureJSCS,
+	checkFileWithJSCS
+} from "jscs-checker";
+import {Log} from "fell";
+import {checkFileWithESLint} from "eslint-checker";
 
-var	Log = require("fell").Log;
-var	Promise = require("bluebird");
-var	chokidar = require("chokidar");
-var	panoptesESLint = require("./panoptes-eslint");
-var	panoptesJSCSChecker = require("./panoptes-jscs");
+module chokidar from "chokidar";
 
 /**
  * Starts up panoptes.
  *
- * @alias module:panoptes/lib/panoptes
+ * @alias module:panoptes/src/index
  * @returns {void}
  */
-module.exports = function launchPanoptes() {
-	var promises = [panoptesJSCSChecker.configureJSCS()];
+export function launchPanoptes() {
+	var promises = [configureJSCS()];
 
 	Promise.
 	all(promises).
@@ -73,8 +74,8 @@ function fileWatchingErrored(error) {
 function watchedJSFileChanged(path) {
 	Log.info("{0} changed", path);
 
-	panoptesJSCSChecker.checkFileWithJSCS(path);
-	panoptesESLint(path);
+	checkFileWithJSCS(path);
+	checkFileWithESLint(path);
 }
 
 /**
