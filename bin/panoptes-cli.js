@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 
-var panoptes = require("../lib/panoptes");
+var panoptes = require("../");
 
-panoptes();
+panoptes.launchPanoptes();
