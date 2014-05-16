@@ -16,12 +16,9 @@ module chokidar from "chokidar";
  * @returns {void}
  */
 export function launchPanoptes() {
-	var promises = [configureJSCS()];
-
-	Promise.
-	all(promises).
-	then(startWatchingJSFiles).
-	catch(launchingFailed);
+	configureJSCS()
+		.then(startWatchingJSFiles)
+		.catch(launchingFailed);
 };
 
 /**

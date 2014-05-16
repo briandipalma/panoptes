@@ -12,8 +12,7 @@ var Log = $traceurRuntime.assertObject(require("fell")).Log;
 var checkFileWithESLint = $traceurRuntime.assertObject(require("eslint-checker")).checkFileWithESLint;
 var chokidar = require("chokidar");
 function launchPanoptes() {
-  var promises = [configureJSCS()];
-  Promise.all(promises).then(startWatchingJSFiles).catch(launchingFailed);
+  configureJSCS().then(startWatchingJSFiles).catch(launchingFailed);
 }
 ;
 function shouldDirectoryBeIgnored(directoryPath) {
