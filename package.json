@@ -15,7 +15,9 @@
     "chokidar": "^0.8.2",
     "fell": "0.0.2",
     "eslint-checker": "git://github.com/briandipalma/eslint-checker",
-    "traceur": "0.0.41",
-    "watchy": "^0.4.4"
+    "traceur": "0.0.41"
+  },
+  "devDependencies": {
+    "watchy": "~0.4.4"
   }
 }
