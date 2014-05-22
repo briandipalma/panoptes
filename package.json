@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "fell": "0.0.2",
-    "traceur": "0.0.41",
+    "traceur": "0.0.42",
     "chokidar": "~0.8.2",
     "jscs-checker": "git://github.com/briandipalma/JSCS-checker",
     "eslint-checker": "git://github.com/briandipalma/eslint-checker"
